@@ -6,9 +6,9 @@ const Header = () => {
     return (
         <div className="px-20 py-4 bg-[#FFFFFF] border border-[#E9E9E9]">
             <nav className="flex items-center justify-between">
-                <div>
+                <div className="flex items-center gap-1">
                     <Link to="/">
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1"> 
                             <img src={logo} alt="Company Logo" />
                             <p className="font-[inter] font-bold text-[24px] leading-6.5 tracking-[0%] bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</p>
                         </div>
