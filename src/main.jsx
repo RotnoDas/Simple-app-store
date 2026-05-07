@@ -7,6 +7,7 @@ import RootLayout from './layout/root_layout/RootLayout'
 import Homepage from './pages/homepage/Homepage'
 import Apps from './pages/apps/Apps'
 import InstallApps from './pages/install_apps/InstallApps'
+import NotFound from './pages/not_found/NotFound'
 
 const router = createBrowserRouter([
   {
@@ -24,9 +25,12 @@ const router = createBrowserRouter([
       {
         path: "installed-apps",
         Component: InstallApps
+      },
+      {
+        path: "*",
+        Component: NotFound
       }
-    ],
-    errorElement: <div>This page is not found</div>
+    ]
   }
 ])
 
