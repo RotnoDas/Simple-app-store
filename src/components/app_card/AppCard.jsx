@@ -9,7 +9,7 @@ const AppCard = ({app}) => {
                 <img src={app.image} alt="App Image" className="w-71.25 h-71.25 rounded-lg" />
             </div>
             <div>
-                <p className="font-[inter] font-medium text-[20px] leading-[auto] tracking-[0%] text-[#001931]">{app.title}</p>
+                <p className="font-[inter] font-bold text-[20px] leading-[auto] tracking-[0%] text-[#001931]">{app.title}</p>
             </div>
             <div className="flex items-center gap-35">
                 <div className="px-2.5 py-1.5 rounded-sm bg-[#F1F5E8]">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import download from "../../assets/fi_18110198.png";
 import rating from "../../assets/fi_1828884.png";
 import review from "../../assets/fi_17817684.png";
@@ -7,6 +7,7 @@ import Loading from "../../components/loading/Loading";
 import { useContext } from "react";
 import { appsContext } from "../../components/installed_apps_context/InstalledAppsContext";
 import { toast, Zoom } from "react-toastify";
+import noApp from "../../assets/OBJECTS.png";
 
 const AppDetails = () => {
     const { installedApps, setInstalledApps } = useContext(appsContext);
@@ -68,8 +69,13 @@ const AppDetails = () => {
             );
         } else {
             return (
-                <div className="px-20 py-20 bg-[#F1F5E8] flex items-center justify-center">
-                    <h1 className="font-[inter] font-bold text-[32px] leading-[auto] tracking-[0%] text-[#001931]">App Not Found</h1>
+                <div className="px-20 py-20 bg-[#F1F5E8] flex flex-col items-center gap-5 h-screen justify-center">
+                    <img src={noApp} alt="No App" />
+                    <h1 className="font-[inter] font-semibold text-[48px] leading-15 tracking-[1.2%] text-[#001931]">OPPS!! APP NOT FOUND</h1>
+                    <p className="font-[inter] font-normal text-[20px] leading-8 tracking-[0%] text-[#627382]">The App you are requesting is not found on our system.  please try another apps</p>
+                    <Link to={"/"}>
+                        <button className="px-4 py-3 bg-linear-to-r from-[#632EE3] to-[#9F62F2] font-[inter] font-semibold text-[16px] leading-[auto] tracking-[0%] text-[#FFFFFF] rounded-lg hover:cursor-pointer">Return Home</button>
+                    </Link>
                 </div>
             );
         }

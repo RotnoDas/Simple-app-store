@@ -38,7 +38,7 @@ const TrendingApps = () => {
                     loading ? 
                         <Loading note={"Please Wait..."}></Loading>
                     :
-                        trendingApps.slice(0, 9).map((app) => {
+                        trendingApps.slice(0, 8).map((app) => {
                             return (
                                 <AppCard key={app.id} app={app}></AppCard>
                             );
