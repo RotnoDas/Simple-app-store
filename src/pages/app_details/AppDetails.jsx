@@ -15,7 +15,7 @@ const AppDetails = () => {
         if(installedApps.find((app) => app.id === expectedId)) {
             toast.info('App is already installed!', {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: false,
                 pauseOnHover: true,
@@ -30,7 +30,7 @@ const AppDetails = () => {
             setInstalledApps([...installedApps, expectedApp]);
             toast.success('App installed successfully!', {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: false,
                 pauseOnHover: true,
@@ -69,7 +69,7 @@ const AppDetails = () => {
             );
         } else {
             return (
-                <div className="px-20 py-20 bg-[#F1F5E8] flex flex-col items-center gap-5 h-screen justify-center">
+                <div className="px-20 py-20 bg-[#F1F5E8] flex flex-col items-center gap-5 min-h-screen justify-center">
                     <img src={noApp} alt="No App" />
                     <h1 className="font-[inter] font-semibold text-[48px] leading-15 tracking-[1.2%] text-[#001931]">OPPS!! APP NOT FOUND</h1>
                     <p className="font-[inter] font-normal text-[20px] leading-8 tracking-[0%] text-[#627382]">The App you are requesting is not found on our system.  please try another apps</p>

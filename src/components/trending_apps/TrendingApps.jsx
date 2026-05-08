@@ -13,7 +13,7 @@ const TrendingApps = () => {
     useEffect(() => {
         const fetchTrendingApps = async() => {
             try {
-                const response = await fetch("/public/data.json");
+                const response = await fetch("/data.json");
                 const data = await response.json();
                 setTimeout(() => {
                     setTrendingApps(data);

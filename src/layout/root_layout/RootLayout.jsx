@@ -10,7 +10,7 @@ const RootLayout = () => {
             <Outlet></Outlet>
             <Footer></Footer>
             <ToastContainer position="bottom-center"
-                autoClose={5000}
+                autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick={false}
