@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
 const Header = () => {
     return (
-        <div className="px-20 py-4 bg-[#FFFFFF] border border-[#E9E9E9]">
+        <div className="px-20 py-4 bg-[#FFFFFF] border border-[#E9E9E9] sticky top-0 z-50">
             <nav className="flex items-center justify-between">
                 <div className="flex items-center gap-1">
                     <Link to="/">

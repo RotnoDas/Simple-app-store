@@ -36,9 +36,9 @@ const TrendingApps = () => {
             <div className="grid grid-cols-4 gap-4">
                 {
                     loading ? 
-                        <Loading></Loading>
+                        <Loading note={"Please Wait..."}></Loading>
                     :
-                        trendingApps.map((app) => {
+                        trendingApps.slice(0, 9).map((app) => {
                             return (
                                 <AppCard key={app.id} app={app}></AppCard>
                             );
