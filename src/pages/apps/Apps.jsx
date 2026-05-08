@@ -8,12 +8,12 @@ const Apps = () => {
     useEffect(() => {
         const fetchApps = async() => {
             try {
-                const response = await fetch("/public/data.json");
+                const response = await fetch("/data.json");
                 const data = await response.json();
                 setTimeout(() => {
                     setApps(data);
                     setLoading(false);
-                }, 3000);
+                }, 1000);
             } catch(error) {
                 console.log(error);
             }

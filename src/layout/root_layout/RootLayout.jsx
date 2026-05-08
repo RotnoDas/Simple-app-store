@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import { Bounce, ToastContainer } from 'react-toastify';
 
 const RootLayout = () => {
     return (
@@ -8,6 +9,18 @@ const RootLayout = () => {
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
+            <ToastContainer position="bottom-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Bounce}
+                />
         </div>
     );
 };

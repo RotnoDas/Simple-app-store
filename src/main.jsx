@@ -8,6 +8,8 @@ import Homepage from './pages/homepage/Homepage'
 import Apps from './pages/apps/Apps'
 import InstallApps from './pages/install_apps/InstallApps'
 import NotFound from './pages/not_found/NotFound'
+import AppDetails from './pages/app_details/AppDetails'
+import InstalledAppsContextProvider from './components/installed_apps_context/InstalledAppsContextProvider'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
         Component: Apps
       },
       {
+        path: "apps/:appId",
+        Component: AppDetails
+      },
+      {
         path: "installed-apps",
         Component: InstallApps
       },
@@ -36,6 +42,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <InstalledAppsContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </InstalledAppsContextProvider>
   </StrictMode>,
 )
