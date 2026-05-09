@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { appsContext } from "../../components/installed_apps_context/InstalledAppsContext";
 import { toast, Zoom } from "react-toastify";
 import noApp from "../../assets/OBJECTS.png";
+import Chart from "../../components/chart/Chart";
 
 const AppDetails = () => {
     const { installedApps, setInstalledApps } = useContext(appsContext);
@@ -116,7 +117,10 @@ const AppDetails = () => {
             </div>
             <hr className="border border-[#D9D9D9] w-full" />
             <div>
-                <h1 className="font-[inter] font-semibold text-[24px] leading-8 tracking-[0%] text-[#001931]">Ratings</h1>
+                <h1 className="font-[inter] font-semibold text-[24px] leading-8 tracking-[0%] text-[#001931] mb-10">Ratings</h1>
+                <div>
+                    <Chart data={expectedApp.ratings}></Chart>
+                </div>
             </div>
             <hr className="border border-[#D9D9D9] w-full" />
             <div className="space-y-6">

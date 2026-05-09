@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@recharts/devtools": "^0.0.13",
     "@tailwindcss/vite": "^4.2.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -17,6 +18,7 @@
     "react-loading-indicators": "^1.0.1",
     "react-router": "^7.15.0",
     "react-toastify": "^11.1.0",
+    "recharts": "^3.8.1",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
